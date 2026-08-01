@@ -1,0 +1,889 @@
+/* ===============================
+   GOOGLE FONT
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F5F5F0;
+    color:#2F3A35;
+    padding:40px;
+}
+
+/* ===============================
+   HEADER
+================================== */
+
+.header{
+    position:relative;
+
+    text-align:center;
+
+    padding:20px 0 40px;
+}
+
+.greeting-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.greeting-section h1{
+    font-size:2.2rem;
+    font-weight:700;
+}
+
+.greeting-section p{
+    margin-top:8px;
+    color:#6c757d;
+}
+
+#theme-toggle{
+    
+    border:none;
+    background:white;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    font-size:1.2rem;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+
+    position:absolute;
+    top:20px;
+    right:20px;
+
+}
+
+#theme-toggle:hover{
+    transform:translateY(-3px);
+}
+
+#greeting{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+#username{
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+/* ===============================
+   DASHBOARD GRID
+================================== */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr 1fr;
+
+    grid-template-areas:
+
+    "clock timer todo"
+
+    "links links todo";
+
+    gap:25px;
+
+}
+
+/* ===============================
+   CARD
+================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:#6A8D73;
+
+}
+
+.clock-card{
+
+    grid-area:clock;
+
+}
+
+.timer-card{
+
+    grid-area:timer;
+
+}
+
+.todo-card{
+
+    grid-area:todo;
+
+}
+
+.links-card{
+
+    grid-area:links;
+
+}
+
+/* ===============================
+   CLOCK
+================================== */
+
+#clock{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+#date{
+
+    color:#777;
+
+}
+
+/* ===============================
+   TIMER
+================================== */
+
+#timer{
+
+    font-size:4rem;
+
+    text-align:center;
+
+    margin:30px 0;
+
+    font-weight:bold;
+
+    color:#6A8D73;
+
+}
+
+.timer-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.timer-buttons button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#6A8D73;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.timer-buttons button:hover{
+
+    background:#56735E;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 16px rgba(0,0,0,.15);
+
+}
+
+/* ===============================
+   TIMER SETTINGS
+================================== */
+
+.timer-setting{
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.timer-setting label{
+
+    font-weight:600;
+
+}
+
+.timer-setting select{
+
+    width:100%;
+
+    padding:12px 16px;
+
+    border:2px solid #D7E3D0;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    color:#2E3A31;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:all .3s ease;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%236A8D73' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5l6.5 6 6.5-6'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 15px center;
+
+    padding-right:45px;
+
+}
+
+/* ===============================
+   TODO
+================================== */
+
+.task-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.task-input input{
+
+    flex:1;
+
+}
+
+.task-input input,
+.link-input input{
+
+    flex:1;
+
+    padding:12px 16px;
+
+    border:2px solid #D7E3D0;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    color:#2E3A31;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:all .3s ease;
+
+    box-sizing:border-box;
+
+}
+
+.task-input input:hover,
+.link-input input:hover{
+
+    border-color:#6A8D73;
+
+}
+
+.task-input input:focus,
+.link-input input:focus{
+
+    border-color:#6A8D73;
+
+    box-shadow:0 0 0 4px rgba(106,141,115,.18);
+
+}
+
+.task-input input::placeholder,
+.link-input input::placeholder{
+
+    color:#9BA39B;
+
+}
+
+.task-input button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6A8D73;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+
+}
+
+#task-list{
+
+    list-style:none;
+
+}
+
+#task-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#F8F8F5;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+}
+
+.sort-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    margin-bottom:20px;
+
+}
+
+.sort-container label{
+
+    white-space:nowrap;
+
+    font-weight:600;
+
+}
+
+.sort-container select{
+
+    width:100%;
+
+    padding:12px 16px;
+
+    border:2px solid #D7E3D0;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    color:#2E3A31;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:all .3s ease;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%236A8D73' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5l6.5 6 6.5-6'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 15px center;
+
+    padding-right:45px;
+
+}
+
+.timer-setting select:hover,
+.sort-container select:hover{
+
+    border-color:#6A8D73;
+
+}
+
+.timer-setting select:focus,
+.sort-container select:focus{
+
+    border-color:#6A8D73;
+
+    box-shadow:0 0 0 4px rgba(106,141,115,.2);
+
+}
+
+/* ===============================
+   TASK PAGINATION
+================================== */
+
+.task-pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+.task-pagination button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#6A8D73;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.task-pagination button:hover:not(:disabled){
+
+    background:#56735E;
+
+    transform:translateY(-2px);
+
+}
+
+.task-pagination button:disabled{
+
+    opacity:.35;
+
+    cursor:not-allowed;
+
+}
+
+#page-info{
+
+    font-weight:600;
+
+    color:#6A8D73;
+
+}
+
+/* ===============================
+   QUICK LINKS
+================================== */
+
+.link-input{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+.link-input button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6A8D73;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+
+}
+
+.task-input button:hover,
+.link-input button:hover{
+
+    background:#56735E;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 16px rgba(0,0,0,.15);
+
+}
+
+.task-input button:active,
+.link-input button:active{
+
+    transform:translateY(0);
+
+}
+
+#links-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+#links-container button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6A8D73;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#links-container button:hover{
+
+    background:#55705d;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===============================
+   FOOTER
+================================== */
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    color:#888;
+
+}
+
+/* ===============================
+   DARK MODE
+================================== */
+
+body.dark{
+
+    background:#1F2421;
+
+    color:white;
+
+}
+
+body.dark .card{
+
+    background:#2B322D;
+
+    color:white;
+
+}
+
+body.dark input{
+
+    background:#3A433D;
+
+    color:white;
+
+    border:none;
+
+}
+
+body.dark #theme-toggle{
+
+    background:#2B322D;
+
+    color:white;
+
+}
+
+body.dark #task-list li{
+
+    background:#3A433D;
+
+}
+
+body.dark .timer-setting select{
+
+    background:#3A433D;
+
+    color:white;
+
+    border:none;
+
+}
+
+body.dark .timer-buttons select:hover{
+
+    background:#56735E;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 16px rgba(0,0,0,.15);
+
+}
+
+body.dark .sort-container select{
+
+    background:#3A433D;
+
+    color:white;
+
+    border:none;
+
+}
+
+body.dark .timer-setting select,
+body.dark .sort-container select{
+
+    background:#313C34;
+
+    color:#F8F8F8;
+
+    border:2px solid #56655A;
+
+}
+
+body.dark .timer-setting select:hover,
+body.dark .sort-container select:hover{
+
+    border-color:#8FB89A;
+
+}
+
+body.dark .timer-setting select:focus,
+body.dark .sort-container select:focus{
+
+    box-shadow:0 0 0 4px rgba(143,184,154,.25);
+
+}
+
+body.dark #username{
+
+    color:#d6d6d6;
+
+}
+
+body.dark .task-input input,
+body.dark .link-input input{
+
+    background:#313C34;
+
+    color:#FFFFFF;
+
+    border:2px solid #56655A;
+
+}
+
+body.dark .task-input input:focus,
+body.dark .link-input input:focus{
+
+    border-color:#8FB89A;
+
+    box-shadow:0 0 0 4px rgba(143,184,154,.25);
+
+}
+
+body.dark .task-input button,
+body.dark .link-input button{
+
+    background:#8FB89A;
+
+    color:#1F2521;
+
+}
+
+body.dark .task-input button:hover,
+body.dark .link-input button:hover{
+
+    background:#A4C8AD;
+
+}
+
+body.dark .task-pagination button{
+
+    background:#8FB89A;
+
+    color:#1F2521;
+
+}
+
+body.dark .task-pagination button:hover:not(:disabled){
+
+    background:#A4C8AD;
+
+}
+
+body.dark #page-info{
+
+    color:#A4C8AD;
+
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    #clock{
+
+        font-size:2.3rem;
+
+    }
+
+    #timer{
+
+        font-size:3rem;
+
+    }
+
+    .timer-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .dashboard{
+
+    grid-template-columns:1fr;
+
+    grid-template-areas:
+
+    "clock"
+
+    "timer"
+
+    "todo"
+
+    "links";
+
+}
+
+}

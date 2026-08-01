@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard | Aurellia Wanasuka</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="greeting-section">
+
+            <h1 id="greeting">Good Morning 👋</h1>
+
+            <p id="username">Welcome back!</p>
+
+        </div>
+
+        <button id="theme-toggle">
+            🌙
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard">
+
+        <!-- Time Card -->
+
+        <section class="card clock-card">
+
+            <h2>Current Time</h2>
+
+            <h1 id="clock">00:00:00</h1>
+
+            <p id="date">
+                Monday, January 1, 2026
+            </p>
+
+        </section>
+
+
+
+        <!-- Pomodoro -->
+
+        <section class="card timer-card">
+
+            <h2>🍅 Focus Timer</h2>
+
+            <div id="timer">
+                25:00
+            </div>
+
+            <div class="timer-setting">
+
+                <label for="timer-duration">
+                    Duration
+                </label>
+
+                <select id="timer-duration">
+
+                    <option value="15">15 Minutes</option>
+                    <option value="25" selected>25 Minutes</option>
+                    <option value="30">30 Minutes</option>
+                    <option value="45">45 Minutes</option>
+                    <option value="60">60 Minutes</option>
+
+                </select>
+
+            </div>
+
+            <div class="timer-buttons">
+
+                <button id="start-btn">Start</button>
+
+                <button id="stop-btn">Stop</button>
+
+                <button id="reset-btn">Reset</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- To Do List -->
+
+        <section class="card todo-card">
+
+            <h2>✅ Today's Tasks</h2>
+
+            <div class="sort-container">
+
+                <label for="sort-tasks">Sort By</label>
+
+                <select id="sort-tasks">
+
+                    <option value="pending">Pending First</option>
+
+                    <option value="completed">Completed First</option>
+
+                    <option value="az">A - Z</option>
+
+                    <option value="za">Z - A</option>
+
+                </select>
+
+            </div>
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Add a new task..."
+                >
+
+                <button id="add-task">
+                    Add
+                </button>
+
+            </div>
+
+            <ul id="task-list">
+
+            </ul>
+
+            <div class="task-pagination">
+
+                <button id="prev-page">◀</button>
+
+                <span id="page-info">1 / 1</span>
+
+                <button id="next-page">▶</button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Quick Links -->
+
+        <section class="card links-card">
+
+            <h2>🔗 Quick Links</h2>
+
+            <div class="link-input">
+
+                <input
+                    type="text"
+                    id="link-name"
+                    placeholder="Website Name"
+                >
+
+                <input
+                    type="url"
+                    id="link-url"
+                    placeholder="https://example.com"
+                >
+
+                <button id="add-link">
+                    Add Link
+                </button>
+
+            </div>
+
+            <div id="links-container">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Life Dashboard | Built by Aurellia Wanasuka using Kiro.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
